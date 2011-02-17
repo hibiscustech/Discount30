@@ -18,6 +18,7 @@ function searchHotels()
     var rooms = document.getElementById("rooms").value;
     var checkin = document.getElementById("checkin").value;
     var checkout = document.getElementById("checkout").value;
+    alert(checkout);
     var adults = document.getElementById("adults").value;
     var children = document.getElementById("children").value;
     var budget = document.getElementById("budget").value;
@@ -32,9 +33,12 @@ function searchHotels()
     }
     xmlhttp.onreadystatechange=function()
     {
+      alert(xmlhttp.readyState);
+      alert(xmlhttp.status);
       if (xmlhttp.readyState==4 && xmlhttp.status==200)
       {
         document.getElementById("searchResults").innerHTML=xmlhttp.responseText;
+        
       }
     }
     xmlhttp.open("GET","search_hotel.php?city="+city+"&rooms="+rooms+"&checkin="+checkin+"&checkout="+checkout+"&adults="+adults+"&children="+children+"&budget="+budget,true);
