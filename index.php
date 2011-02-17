@@ -1,12 +1,9 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
-<html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title></title>
-    </head>
-    <body>
-        <?php
-        echo "Welcome to Discount30"
-        ?>
-    </body>
-</html>
+<?php
+session_start();
+include('XMLToArrayFlat.php');
+include('create_session.php');
+?>
+
+<?php
+$_SESSION['user_session'] = discount30_session();
+?>
