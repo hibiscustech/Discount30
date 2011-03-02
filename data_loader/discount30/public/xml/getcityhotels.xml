@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<magic>
+  <login>
+    <mr_session>36ivcwqsEB6dUljkdwGN1wCVegnp0XjWT9kMhvhngqE3OmqXHWZZmkK5p3GRFtZ6</mr_session>
+    <status>Connection Success</status>
+    <status_flag>1</status_flag>
+    <access_time>2011-03-01 11:41:59</access_time>
+  </login>
+  <info_req>
+    <city_name>ooty</city_name>
+    <activities>1</activities>
+    <amenities>1</amenities>
+    <route_map>1</route_map>
+    <images>1</images>
+    <room_types>
+      <details>1</details>
+      <image>1</image>
+    </room_types>
+    <packages>
+      <details></details>
+      <image></image>
+    </packages>
+  </info_req>   
+  <hotels id="3288">
+    <info_res>
+      <res_status>
+        <flag>1</flag>
+        <errormsg></errormsg>
+      </res_status>
+      <hotel_info>
+        <basic_info>
+          <hotel_id>3288</hotel_id>
+          <hotel_name>Club Mahindra Derby Green</hotel_name>
+          <hotel_type></hotel_type>
+          <hotel_address>
+            <hotel_add1>29-49,Baikey Road,Ettinnes Road,</hotel_add1>
+            <hotel_add2>Ooty(Near Race Course)</hotel_add2>
+            <hotel_add3></hotel_add3>
+            <hotel_city>Ooty</hotel_city>
+            <hotel_state>Tamilnadu</hotel_state>
+            <hotel_country>IN</hotel_country>
+            <hotel_zip>000000</hotel_zip>
+          </hotel_address>
+          <hotel_contacts>
+            <phone1>0423-2101072</phone1>
+            <phone2>9444735401</phone2>
+          </hotel_contacts>
+          <star_category>0</star_category>
+          <defa_check_in></defa_check_in>
+          <defa_check_out></defa_check_out>
+        </basic_info>
+        <activities>
+          <activity id="1">
+            <name>Indoor Games</name>
+            <extra_cost>0</extra_cost>
+          </activity>
+        </activities>
+        <amenities>
+          <amenity id="20">
+            <name>Gardens</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="29">
+            <name>Meeting room(s)</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="40">
+            <name>Restaurant</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="49">
+            <name>Business Center</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="103">
+            <name>Banquet Hall</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="124">
+            <name>Bell Desk</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="127">
+            <name>Room Service</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="161">
+            <name>Parking</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="164">
+            <name>Laundry Service</name>
+            <extra_cost></extra_cost>
+          </amenity>
+          <amenity id="185">
+            <name>Doctor on call</name>
+            <extra_cost></extra_cost>
+          </amenity>
+        </amenities>
+        <route_map>
+          <route_desc></route_desc>
+          <img_url>http://magicrooms.in/hotels/photo/images/</img_url>
+          <img_tn>http://magicrooms.in/hotels/photo/images/tn_</img_tn>
+          <lat></lat>
+          <long></long>
+        </route_map>
+        <images>
+          <image id="5">
+            <img_url>http://magicrooms.in/hotels/hotelimg/3288_1287655442.jpg</img_url>
+            <img_tn>http://magicrooms.in/hotels/hotelimg/tn_3288_1287655442.jpg</img_tn>
+            <img_title>Superior Room</img_title>
+            <img_desc></img_desc>
+          </image>
+          <image id="2">
+            <img_url>http://magicrooms.in/hotels/hotelimg/3288_1287655465.jpg</img_url>
+            <img_tn>http://magicrooms.in/hotels/hotelimg/tn_3288_1287655465.jpg</img_tn>
+            <img_title>Elevation</img_title>
+            <img_desc></img_desc>
+          </image>
+          <image id="6">
+            <img_url>http://magicrooms.in/hotels/hotelimg/3288_1287655489.jpg</img_url>
+            <img_tn>http://magicrooms.in/hotels/hotelimg/tn_3288_1287655489.jpg</img_tn>
+            <img_title>Living Room</img_title>
+            <img_desc></img_desc>
+          </image>
+          <image id="7">
+            <img_url>http://magicrooms.in/hotels/hotelimg/3288_1287655507.jpg</img_url>
+            <img_tn>http://magicrooms.in/hotels/hotelimg/tn_3288_1287655507.jpg</img_tn>
+            <img_title>Outside View</img_title>
+            <img_desc></img_desc>
+          </image>
+          <image id="1">
+            <img_url>http://magicrooms.in/hotels/hotelimg/3288_1287655521.jpg</img_url>
+            <img_tn>http://magicrooms.in/hotels/hotelimg/tn_3288_1287655521.jpg</img_tn>
+            <img_title>Logo</img_title>
+            <img_desc></img_desc>
+          </image>
+        </images>
+        <room_types>
+          <room id="1">
+            <room_type_id>1</room_type_id>
+            <room_type_name>Superior Room</room_type_name>
+            <img_url>http://magicrooms.in/hotels/photo/images/1287655393.jpg</img_url>
+            <img_tn>http://magicrooms.in/hotels/photo/images/tn_1287655393.jpg</img_tn>
+            <total_count>91</total_count>
+            <single_occupancy_flag>1</single_occupancy_flag>
+            <double_occupancy_flag>1</double_occupancy_flag>
+            <triple_occupancy_flag>0</triple_occupancy_flag>
+            <max_pax>3</max_pax>
+            <rates>
+              <single_occupancy_rate>3000.00</single_occupancy_rate>
+              <double_occupancy_rate>3000.00</double_occupancy_rate>
+              <triple_occupancy_rate>0.00</triple_occupancy_rate>
+              <extra_adult>1125.00</extra_adult>
+              <child_rate>0.00</child_rate>
+              <st>12.50</st>
+              <sc>0.00</sc>
+            </rates>
+            <room_desc></room_desc>
+            <inclusions><![CDATA[<font size="2"><span style="font-family: Arial,Helvetica,sans-serif;">Breakfast</span></font>]]></inclusions>
+            <cancel_policy><![CDATA[<font size="2"><span style="font-family: Arial,Helvetica,sans-serif;">Cancellation has to be done less than 15 days notice else 100% retention will be applicable.</span></font>]]></cancel_policy>
+          </room>
+          <Discounts/>
+        </room_types>
+      </hotel_info>
+    </info_res>
+  </hotels>
+</magic>

@@ -1,0 +1,213 @@
+-- MySQL Administrator dump 1.4
+--
+-- ------------------------------------------------------
+-- Server version	5.0.51b-community-nt
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8 */;
+
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+
+
+--
+-- Create schema discount30
+--
+
+CREATE DATABASE IF NOT EXISTS discount30;
+USE discount30;
+
+--
+-- Definition of table `hotel_master`
+--
+
+DROP TABLE IF EXISTS `hotel_master`;
+CREATE TABLE `hotel_master` (
+  `hotel_id` varchar(10) NOT NULL,
+  `desk_id` varchar(10) default NULL,
+  `hotel_name` varchar(60) default NULL,
+  `hotel_ac_name` varchar(60) default NULL,
+  `hotel_email` varchar(40) default NULL,
+  `hotel_type_id` varchar(2) default NULL,
+  `hotel_loc_type` int(5) default NULL,
+  `hotel_add1` varchar(50) default NULL,
+  `hotel_add2` varchar(50) default NULL,
+  `hotel_add3` varchar(50) default NULL,
+  `hotel_city` varchar(40) default NULL,
+  `hotel_state` varchar(20) default NULL,
+  `hotel_country` varchar(20) default NULL,
+  `hotel_zip` varchar(10) default NULL,
+  `hotel_desc` text,
+  `hotel_phone1` varchar(20) default NULL,
+  `hotel_phone2` varchar(20) default NULL,
+  `hotel_contact_per` varchar(30) default NULL,
+  `flag_group` int(1) default '0',
+  `hotel_group_id` int(5) default '0',
+  `pass` varchar(256) default NULL,
+  `ip` varchar(15) default NULL,
+  `crea_user` varchar(10) default NULL,
+  `crea_date` datetime default NULL,
+  `modi_user` varchar(10) default NULL,
+  `modi_date` datetime default NULL,
+  `flag_status` decimal(1,0) default '0',
+  `flag_delete` decimal(1,0) default '0',
+  `magic_desk_id` varchar(10) default NULL,
+  `star_category` int(1) default '0',
+  `flag_ppa` int(1) default '0',
+  `ppa_dt` date default NULL,
+  `act_dt` datetime default NULL,
+  `act_desk_id` varchar(10) default NULL,
+  `trn_desk_id` varchar(10) default NULL,
+  `live_dt` datetime default NULL,
+  `live_desk_id` varchar(10) default NULL,
+  `magic_notes` text,
+  `annual` decimal(9,2) default '0.00',
+  `b_rn` int(3) default '0',
+  `b_room_type_id` int(2) default '0',
+  `trans1` decimal(7,2) default '0.00',
+  `trans2` decimal(7,2) default '0.00',
+  `temp1` varchar(40) default NULL,
+  `temp2` varchar(40) default NULL,
+  `hotel_city_id` int(10) default NULL,
+  `hotel_state_id` int(7) default NULL,
+  `hotel_country_id` int(4) default NULL,
+  `assign_to` varchar(10) default NULL,
+  `hotel_area_id` int(5) default NULL,
+  `flag_no_inv` int(1) default '0',
+  `flag_no_rate` int(1) default '0',
+  `transaction_fee` int(10) default '60',
+  `flag_mmt` int(1) default '0',
+  `hotel_logo` text,
+  PRIMARY KEY  (`hotel_id`),
+  KEY `hotel_id` (`hotel_id`,`flag_status`,`flag_delete`),
+  KEY `hotel_city` (`hotel_city`),
+  KEY `hotel_city_id` (`hotel_city_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 ROW_FORMAT=DYNAMIC;
+
+--
+-- Dumping data for table `hotel_master`
+--
+
+/*!40000 ALTER TABLE `hotel_master` DISABLE KEYS */;
+INSERT INTO `hotel_master` (`hotel_id`,`desk_id`,`hotel_name`,`hotel_ac_name`,`hotel_email`,`hotel_type_id`,`hotel_loc_type`,`hotel_add1`,`hotel_add2`,`hotel_add3`,`hotel_city`,`hotel_state`,`hotel_country`,`hotel_zip`,`hotel_desc`,`hotel_phone1`,`hotel_phone2`,`hotel_contact_per`,`flag_group`,`hotel_group_id`,`pass`,`ip`,`crea_user`,`crea_date`,`modi_user`,`modi_date`,`flag_status`,`flag_delete`,`magic_desk_id`,`star_category`,`flag_ppa`,`ppa_dt`,`act_dt`,`act_desk_id`,`trn_desk_id`,`live_dt`,`live_desk_id`,`magic_notes`,`annual`,`b_rn`,`b_room_type_id`,`trans1`,`trans2`,`temp1`,`temp2`,`hotel_city_id`,`hotel_state_id`,`hotel_country_id`,`assign_to`,`hotel_area_id`,`flag_no_inv`,`flag_no_rate`,`transaction_fee`,`flag_mmt`,`hotel_logo`) VALUES 
+ ('2282',NULL,'Nahar\'s Residency Hotel',NULL,NULL,NULL,NULL,'No.100, Main Bazaar Road,','Ooty',NULL,'Ooty','Tamilnadu','IN','643001',NULL,'0423-2444696',NULL,NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/2282_1281090258.jpg'),
+ ('3155',NULL,'Hotel Race View',NULL,NULL,NULL,NULL,'Blue Mountain School,','(Opp) Ettines Road Near Shivashakthi Hospital','Ooty Nilgiris, Tamil Nadu','Ooty','Tamilnadu','IN','0000000',NULL,'0432-2448835','9443077881',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/3155_1286273514.jpg'),
+ ('3205',NULL,'Sterling Fernhill',NULL,NULL,NULL,NULL,'P.B # 73,Kundah House Road,Fern Hill Post',NULL,NULL,'Ooty','Tamilnadu','IN','643257',NULL,'044-66937114','08098093860',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/3205_1287236217.jpg'),
+ ('3208',NULL,'Sherlock',NULL,NULL,NULL,NULL,'Upper Thalyatmund, Tiger Hill Road',NULL,NULL,'Ooty','Tamilnadu','IN','00000',NULL,'0423-2224545','09487000111',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/3208_1286533084.jpg'),
+ ('3209',NULL,'Kings Cliff',NULL,NULL,NULL,NULL,'Havelock Road, Strawberry Hill Ooty',NULL,NULL,'Ooty','Tamilnadu','IN','643001',NULL,'0423-2442403','9487000111',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/3209_1286520522.jpg'),
+ ('3212',NULL,'Destiny Farmstay',NULL,NULL,NULL,NULL,'Mulligur Village Emerald Po Ooty',NULL,NULL,'Ooty','Tamilnadu','IN','000000',NULL,'0423-2900500','9487000111',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/3212_1286535579.jpg'),
+ ('3270',NULL,'Sterling Elk Hill',NULL,NULL,NULL,NULL,'25, Ramakrishan Mutt Road,','Ramakrishna.',NULL,'Ooty','Tamilnadu','IN','643001',NULL,'0423-2452634/35','8098093860',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/3270_1287815008.jpg'),
+ ('3288',NULL,'Club Mahindra Derby Green',NULL,NULL,NULL,NULL,'29-49,Baikey Road,Ettinnes Road,','Ooty(Near Race Course)',NULL,'Ooty','Tamilnadu','IN','000000',NULL,'0423-2101072','9444735401',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,'0','0',NULL,0,0,NULL,NULL,NULL,NULL,NULL,NULL,NULL,'0.00',0,0,'0.00','0.00',NULL,NULL,NULL,NULL,NULL,NULL,NULL,0,0,60,0,'http://magicrooms.in/hotels/hotelimg/3288_1287655521.jpg');
+/*!40000 ALTER TABLE `hotel_master` ENABLE KEYS */;
+
+
+--
+-- Definition of table `hotel_meal_plans`
+--
+
+DROP TABLE IF EXISTS `hotel_meal_plans`;
+CREATE TABLE `hotel_meal_plans` (
+  `hotel_id` varchar(30) NOT NULL,
+  `meal_plan_id` double NOT NULL,
+  `meal_plan_name` varchar(90) default NULL,
+  `meal_plan_short` varchar(15) default NULL,
+  `meal_plan_incl` blob,
+  `flag_dele` double default NULL,
+  `default_flag` int(1) default '0',
+  `break_fast` int(1) default '0',
+  `lunch` int(1) default '0',
+  `dinner` int(1) default '0',
+  PRIMARY KEY  (`hotel_id`,`meal_plan_id`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hotel_meal_plans`
+--
+
+/*!40000 ALTER TABLE `hotel_meal_plans` DISABLE KEYS */;
+INSERT INTO `hotel_meal_plans` (`hotel_id`,`meal_plan_id`,`meal_plan_name`,`meal_plan_short`,`meal_plan_incl`,`flag_dele`,`default_flag`,`break_fast`,`lunch`,`dinner`) VALUES 
+ ('1261',2,'MAPAI','MAPAI',0x4D41504149,0,0,0,0,0),
+ ('1261',1,'CPAI','CPAI',0x427265616B66617374,0,0,0,0,0),
+ ('1003',2,'Jungle Plan','JP',0x425245414B464153542C204C554E434820414E442044494E4E455220414C4F4E47205749544820534146415249,0,0,0,0,0),
+ ('1003',1,'CP','CP',0x427265616B66617374,0,0,0,0,0),
+ ('3494',1,'Continental Plan','CP',0x427265616B666173742C2064696E6E6572,0,0,0,0,0),
+ ('3496',1,'Continental Plan','CP',0x427265616B66617374,0,0,0,0,0),
+ ('3495',1,'Continental Plan','CP',0x427265616B66617374,0,0,0,0,0),
+ ('3497',1,'Continental Plan','CP',0x427265616B66617374,0,0,0,0,0),
+ ('3494',2,'Modified American Plan','MAP',0x427265616B666173742C206C756E63682C7465612C2064696E6E6572,0,0,0,0,0),
+ ('1261',3,'APAI','APAI',0x41504149,0,0,0,0,0),
+ ('1003',3,'MAP','MAP',0x427265616B6661737420616E642044696E6E6572,0,0,0,0,0);
+/*!40000 ALTER TABLE `hotel_meal_plans` ENABLE KEYS */;
+
+
+--
+-- Definition of table `hotel_room_types`
+--
+
+DROP TABLE IF EXISTS `hotel_room_types`;
+CREATE TABLE `hotel_room_types` (
+  `hotel_id` varchar(30) NOT NULL,
+  `room_type_id` double NOT NULL,
+  `room_type_name` varchar(150) NOT NULL,
+  `room_type_desc` blob,
+  `room_type_total` decimal(5,0) default NULL,
+  `flag_single` int(11) default NULL,
+  `flag_double` int(11) default NULL,
+  `flag_triple` int(11) default NULL,
+  `max_pax` int(11) default NULL,
+  `inclusions` blob,
+  `cancel_policy` text,
+  `no_show_policy` text,
+  `photo` varchar(96) default NULL,
+  `def_mp` int(5) default '0',
+  `flag_dele` double default NULL,
+  PRIMARY KEY  (`hotel_id`,`room_type_id`),
+  KEY `hotel_id` (`hotel_id`,`room_type_id`,`flag_dele`)
+) ENGINE=MyISAM DEFAULT CHARSET=latin1;
+
+--
+-- Dumping data for table `hotel_room_types`
+--
+
+/*!40000 ALTER TABLE `hotel_room_types` DISABLE KEYS */;
+INSERT INTO `hotel_room_types` (`hotel_id`,`room_type_id`,`room_type_name`,`room_type_desc`,`room_type_total`,`flag_single`,`flag_double`,`flag_triple`,`max_pax`,`inclusions`,`cancel_policy`,`no_show_policy`,`photo`,`def_mp`,`flag_dele`) VALUES 
+ ('2282',1,'Standard Room',NULL,NULL,1,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E526F6F6D206F6E6C792E3C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('2282',2,'Deluxe Room',NULL,NULL,1,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E526F6F6D206F6E6C792E3C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('2282',3,'Suite Room',NULL,NULL,1,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E526F6F6D206F6E6C792E3C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('2282',4,'Superior Room',NULL,NULL,1,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E526F6F6D206F6E6C792E3C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('2282',5,'Family Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E526F6F6D206F6E6C792E3C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('2282',6,'Inter Connected Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E526F6F6D206F6E6C792E3C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('3155',1,'Deluxe Room',NULL,NULL,0,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286273020.jpg',0,NULL),
+ ('3155',2,'Family Room',NULL,NULL,1,1,0,4,0x427265616B666173742E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('3155',3,'Luxury Room',NULL,NULL,1,1,0,3,0x526F6F6D204F6E6C79,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1297329819.jpg',0,NULL),
+ ('3205',1,'Standard Room',NULL,NULL,1,1,0,3,0x427265616B66617374,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286514894.jpg',0,NULL),
+ ('3205',2,'Junior Suite Room',NULL,NULL,1,1,0,3,0x427265616B66617374,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286515314.jpg',0,NULL),
+ ('3205',3,'Suite Room',NULL,NULL,1,1,0,4,0x427265616B66617374,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286516366.jpg',0,NULL),
+ ('3205',4,'Deluxe Suite Room',NULL,NULL,1,1,0,6,0x427265616B66617374,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286517026.jpg',0,NULL),
+ ('3208',1,'Luxury Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173742E3C2F7370616E3E3C2F666F6E743E3C6272202F3E3C6272202F3E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286532836.jpg',0,NULL),
+ ('3208',2,'Deluxe Room',NULL,NULL,1,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173742E3C2F7370616E3E3C6272207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B22202F3E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E3C6272202F3E3C2F7370616E3E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E3C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286532931.jpg',0,NULL),
+ ('3209',1,'Luxury Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286519774.jpg',0,NULL),
+ ('3209',2,'Deluxe Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286519818.jpg',0,NULL),
+ ('3209',3,'Semi Deluxe Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL),
+ ('3212',1,'Deluxe Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286534498.jpg',0,NULL),
+ ('3212',2,'Luxury Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1286534660.jpg',0,NULL),
+ ('3270',1,'Standard Room',NULL,NULL,1,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1287262443.jpg',0,NULL),
+ ('3270',2,'Junior Suite Room',NULL,NULL,1,1,0,3,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1287262469.jpg',0,NULL),
+ ('3270',3,'Suite Room',NULL,NULL,1,1,0,4,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/1287262497.jpg',0,NULL),
+ ('3270',4,'Deluxe Suite Room',NULL,NULL,1,1,0,6,0x3C666F6E742073697A653D2232223E3C7370616E207374796C653D22666F6E742D66616D696C793A20417269616C2C48656C7665746963612C73616E732D73657269663B223E427265616B666173743C2F7370616E3E3C2F666F6E743E,NULL,NULL,'http://magicrooms.in/hotels/photo/images/',0,NULL);
+/*!40000 ALTER TABLE `hotel_room_types` ENABLE KEYS */;
+
+
+
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

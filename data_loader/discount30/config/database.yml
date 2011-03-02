@@ -1,0 +1,21 @@
+development:
+  adapter: mysql
+  database: discount30
+  username: root
+  password: relton
+  host: localhost
+  pool: 5
+
+test:
+  adapter: mysql
+  database: enginey_test
+  username: root
+  password:
+  host: localhost
+
+production:
+  adapter: mysql
+  database: enginey_production
+  username: root
+  password:
+  host: localhost
